@@ -86,7 +86,7 @@ namespace UdemyAuthServer.Service.Services
             _genericRepository.Update(updateEntity);
 
             await _unitOfWork.CommmitAsync();
-            //204 durum kodu =>  No Content  => Response body'sinde hiç bir dat  olmayacak.
+            //204 durum kodu =>  No Content  => Response body'sinde hiç bir data  olmayacak.
             return Response<NoDataDto>.Success(204);
         }
 

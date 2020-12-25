@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SharedLibrary.Configurations;
+using SharedLibrary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,7 @@ namespace UdemyAuthServer.API
                 Opt.User.RequireUniqueEmail = true;
                 Opt.Password.RequireNonAlphanumeric = false;
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
             services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption"));
 
             services.Configure<List<Client>>(Configuration.GetSection("Clients"));

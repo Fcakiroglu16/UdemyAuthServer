@@ -9,4 +9,6 @@ namespace UdemyAuthServer.Core.Models
     {
         public string City { get; set; }
     }
+
+   
 }

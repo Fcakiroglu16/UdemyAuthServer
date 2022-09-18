@@ -15,7 +15,7 @@ namespace UdemyAuthServer.Data.Configurations
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
             builder.Property(x => x.Stock).IsRequired();
 
-            builder.Property(x => x.Price).HasColumnType("decimal(18,2");
+            builder.Property(x => x.Price).HasColumnType("decimal(18,2)");
             builder.Property(x => x.UserId).IsRequired();
         }
     }

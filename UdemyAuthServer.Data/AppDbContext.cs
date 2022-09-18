@@ -18,7 +18,7 @@ namespace UdemyAuthServer.Data
         {
         }
 
-        public DbSet<Product> Produts { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
 

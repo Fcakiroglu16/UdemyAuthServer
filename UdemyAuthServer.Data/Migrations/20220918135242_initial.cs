@@ -1,10 +1,14 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace UdemyAuthServer.Data.Migrations
 {
+    /// <inheritdoc />
     public partial class initial : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -48,7 +52,7 @@ namespace UdemyAuthServer.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Produts",
+                name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -60,7 +64,7 @@ namespace UdemyAuthServer.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produts", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -222,6 +226,7 @@ namespace UdemyAuthServer.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
@@ -240,7 +245,7 @@ namespace UdemyAuthServer.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Produts");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "UserRefreshTokens");

@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 
 namespace MiniApp1.API.Controllers
 {
-    [Authorize(Roles ="admin")]
+  
     [Route("api/[controller]")]
     [ApiController]
     public class StockController : ControllerBase
     {
+
+
+
+        [Authorize(Roles = "admin",Policy = "AnkaraPolicy")]
         [HttpGet]
         public IActionResult GetStock()
         {
